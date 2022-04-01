@@ -14,4 +14,4 @@ RUN pip install --upgrade pip && pip install mcdreforged && pip cache purge
 
 VOLUME /workspace
 WORKDIR /workspace
-ENTRYPOINT ["python", "-m", "mcdreforged"]
+CMD ["python", "-m", "mcdreforged"]
