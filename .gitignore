@@ -1,5 +1,7 @@
 !**/.gitkeep
-/config/*
+/config.yml
+/permission.yml
+/config
 /logs
 /qb_multi
 /server/eula.txt
