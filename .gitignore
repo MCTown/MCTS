@@ -11,6 +11,7 @@
 /server/logs
 /server/versions
 /server/world
+/server/start.sh
 /server/fabric-server-launcher.properties
 /server/server.properties
 /server/fabric-server-launch.jar

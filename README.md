@@ -1,17 +1,23 @@
 # MCTS
 
-MCTown Server
+[MCTown](https://www.mctown.tech/)的服务端软件MCTS, 即MCTown Server。
 
-## Usage
+版本号的规范是
 
-The server can be installed by using docker or manually.
+1. 大版本对应麻将大更新，从1对应1.17开始
+2. 小版本对应麻将小版本更新
+3. patch版本对应上游mod的更新，推荐选最新的
 
-### Docker
+比如`2.1.x`对应是`Minecraft 1.18.1`，请根据版本号寻找合适自己的MCTS版本。
 
-The recommended way to use this server is to use docker. Simply have docker installed and run `./install.sh`. It comes with a correct python with mcdreforged installed and [Dragonwell17](https://dragonwell-jdk.io/). Run `./start.sh` to start the server. It will launch the container detached with name `minecraft`.
+## 安装
 
-There's also a pre-built docker image at [`xiaoyu2006/mcts-runtime`](https://hub.docker.com/repository/docker/xiaoyu2006/mcts-runtime/).
+服务端官方支持仅支持基于Linux的Docker安装方法，请确保Docker已在运行状态。
 
-### Manual
+MCTS有预先写好的安装脚本，只要在根目录下运行`./install.sh`即可。使用`./start.sh`在后台启动服务端，`docker attach minecraft`进入控制台，`CTRL+P` `CTRL+Q`退出。
 
-Install `Java17` runtime with correct `JAVA_HOME` set. Also you need to install `Python3.6+` and [`mcdreforged`](https://pypi.org/project/mcdreforged/). You should also execute fabric-installer in `server` directory. Run `python -m mcdreforged` to start the server.
+注意修改`server/start.sh`中的-Xms和-Xmx至符合你电脑的内存（推荐 可用内存-1.5G）。
+
+## 更新
+
+`git pull`之后再次运行`./install.sh`即可。如果你添加/修改了什么导致冲突的话自己解决一下就好。
